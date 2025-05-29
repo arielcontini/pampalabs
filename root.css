@@ -1,0 +1,108 @@
+:root {                         
+    --color-primary: #3498db; 
+    }   
+
+    body{
+        font-size: 67.5%;
+    }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div:has(p) {
+border: .2rem solid red;
+padding: 1rem;
+background-color: lightgoldenrodyellow;
+}
+
+label:has(input:checked){
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 1s;
+}
+
+
+table:has(tr)+p{
+    display: block;
+    color:greenyellow;
+}
+
+
+
+:is(h1, h2, h3){
+    color: red;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+:is(article, section, aside) a {
+color: purple;
+text-decoration: none;
+font-size: 1.6rem;
+padding: 8px;
+}
+
+
+
+section:is(.destacado){
+color:greenyellow;
+}
+
+
+section:where(.destacado){
+    color:red;
+} /* frente a la clase no tiene ninguna especificidad*/
+
+
+
+
+p:not(.distinto){
+color: blueviolet;
+font-style: italic;
+}
+
+
+
+div p:nth-child(2n){
+    color:red;
+    font-weight: bold;
+}
+
+
+
+
+.tarjeta{
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+
+.contenedor{
+    container-type: inline-size;
+    width: 100%;
+    max-width: 900px;
+    padding: 8px;
+    border: 1px solid red;
+}
+
+/* Media Queries 
+@media(max-width:600px){
+    .tarjeta{
+        background-color: red;
+    }
+}
+    */
+
+    @container(max-width: 400px){
+        .tarjeta{
+            background-color: aquamarine;
+        }
+    }

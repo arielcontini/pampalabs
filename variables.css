@@ -1,0 +1,20 @@
+:root{
+    --color--principal: purple;
+    --color--secundario: green;
+    --tamaño--grande: 2.4rem;
+    --tamaño--pequeño: 1.6rem;
+    --fuente--titulo: 'Arial' sans-serif;
+    --fuente--parrafo: 'georgia' serif;
+}
+
+h1{
+    font-size: var(--tamaño--grande);
+    font-family: var(--fuente--titulo);
+    color: var(--color--principal);
+}
+
+p{
+    color: var(--color--secundario);
+    font-size: var(--tamaño--pequeño);
+    font-family: var(--fuente--parrafo);
+}

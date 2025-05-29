@@ -1,0 +1,35 @@
+.caja{
+    /* width: clamp(200px, 100% , 500px); */
+    width: min(500px, 50%); 
+    height: 500px;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+
+h1{
+    /* font-size: clamp(1.6rem, 50% , 2.4rem); */
+font-size: max(24px, 3vw);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@property --color-fondo{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+}
+
+
+
+
+body{
+    background-color: var(--color-fondo);
+    transition: background-color 2s ease-in-out;
+}
+
+body:hover{
+    --color-fondo: red;
+}

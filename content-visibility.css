@@ -1,0 +1,15 @@
+.item{
+    padding: 1.6rem;
+    margin: 10px 0;
+    border: 1px solid black;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+
+.optimizado{
+content-visibility: auto; /* solo se renderizara lo que esta cerca del viewport */
+contain-intrinsic-size: 50px;
+}
+

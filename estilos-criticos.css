@@ -1,0 +1,13 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+button{
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}

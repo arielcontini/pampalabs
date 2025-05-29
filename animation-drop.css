@@ -1,0 +1,32 @@
+body{
+background: url("https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card{
+    backdrop-filter: blur(10px);
+    width: 300px;
+    padding: 24px;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 16px;
+    color: rgba(2, 1, 1, 0.931);
+    background: rgba(255, 255, 255, 0.333);
+}
+
+
+
+.plus-lighter{
+mix-blend-mode: plus-lighter;
+color: black;
+background-color: white;
+}
+
+.color-burn{
+    mix-blend-mode: color-burn;
+    color:white;
+    background-color: rgb(47, 47, 47)
+}

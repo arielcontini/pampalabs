@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    padding: 2.4rem;
+    background-color: antiquewhite;
+}
+
+h1{
+    margin-bottom: 2.4rem;
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 8px;
+}
+
+/* contenedores para demostración */
+
+.contenedor-general{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.contenedor-pequeno{
+    width: 240px;
+    padding: .8rem;
+    background-color: cornsilk;
+    border-radius: 8px;
+}
+
+.contenedor-mediano{
+    width: 400px;
+    padding: .8rem;
+    background-color: cornsilk;
+    border-radius: 8px;
+}
+
+.contenedor-grande{
+    width: 640px;
+    padding: .8rem;
+    background-color: cornsilk;
+    border-radius: 8px;
+}
+
+/* declaramos el contenedor para las container queries */
+
+.producto-tarjeta-contenedor{
+    container-type: inline-size;
+    container-name: tarjeta;
+}
+
+/* definimos el componente base */
+
+.producto-tarjeta{
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.producto-image{
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+}
+
+.producto-info{
+padding: 1.6rem;
+}
+
+.producto-titulo{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.producto-descripcion{
+    font-size: .8rem;
+    color: #333;
+    margin-bottom: 1.6rem;
+}
+
+.producto-precio{
+    font-weight: 700;
+    color: red;
+    margin-bottom: 1.6rem;
+}
+
+.producto-button{
+    padding: .8rem 1.6rem;
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.producto-button:hover{
+    background-color: blueviolet;
+}
+
+
+
+/* container queries */
+
+@container tarjeta (min-width:320px){
+    .producto-tarjeta{
+        flex-direction: row;
+    }
+
+    .producto-image{
+        width: 40%;
+    }
+}
+
+
+@container tarjeta (min-width:500px){
+    .producto-tarjeta{
+        flex-direction: row;
+    }
+
+    .producto-image{
+        width: 32%;
+    aspect-ratio: 1.1 / 1.3;
+    }
+
+    .producto-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

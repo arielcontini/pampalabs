@@ -1,0 +1,77 @@
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn{
+    background: #663399;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.menu-list{
+    position:absolute;
+    top:40px;
+    left:0;
+    background: white;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #663399;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+a{
+    text-decoration: none;
+    color: #663399;
+}
+
+.menu:hover .menu-list, .menu:focus-within .menu-list{
+opacity:1;
+transform: scaleY(1);
+}
+
+.seccion{
+    display: none; /* ocultismo*/
+    padding: 20px;
+    background-color: lightblue;
+    margin-top: 20px;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 10000;
+}
+
+
+.carrusel{  
+    display: flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:16px;
+    scroll-behavior: smooth;
+}
+
+.carrusel img{
+    display: flex;
+    width: 55%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
+    scroll-snap-align: center;
+    border-radius:16px;
+}
+
+
+input[type="checkbox"],
+input[type="radio"]{
+    accent-color: red;
+}
+
+
+form{
+    padding: 25px;
+    margin:10px;
+}

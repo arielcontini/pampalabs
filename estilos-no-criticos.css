@@ -1,0 +1,15 @@
+.extra{
+    background-color: rgb(164, 112, 213);
+    padding: 20px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    border: 2px solid rgb(64, 19, 107);
+}
+
+
+#contenido{
+    background: lightblue;
+    padding: 20px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+}
