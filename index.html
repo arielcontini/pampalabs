@@ -3,103 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pampaLabs</title>
-    <link rel="stylesheet" href="root.css">
+    <title>pampaLabs 2025</title>
+    <link rel="stylesheet" href="./mobile.css">
 </head>
 <body>
-       
-<div>
-    <p>este DIV tiene un párrafo</p>
+
+<!-- navegacion -->
+
+<header>
+<nav class="nav--menu">
+    <div class="nav--logo">
+    <h2>pampaLabs</h2>
+    </div>
+    <div class="nav--links">
+        <a href="#proyectos"> proyectos</a>
+        <a href="#habilidades"> habilidades</a>
+        <a href="#contacto"> contacto</a>
+    </div>
+</nav>
+</header>
+
+<!-- contenedor principal -->
+
+<main>  
+<!-- hero -->
+<section class="hero">
+    <h1> Somos <span> Pampa Labs</span></h1>
+    <p> crafting value-driven experiences</p>
+    <a href="#contacto" class="cta-button"> contact us</a>
+    <article>
+
+</article>
+</section>
+
+<!--  proyectos -->
+
+<section id="proyectos" class="proyectos">
+<h2> PROYECTOS</h2>
+
+<div class="proyectos--grid">
+
+    <!-- PROYECTO 1 -->
+<article class="proyecto--card">
+<div class="proyecto--img">
+    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+</div>        
+<div class="proyecto--data">
+    <h3> Nombre del proyecto</h3>
+    <p> Producto digital resultante</p>
+    <div class="proyecto--tech">
+        <span class="etiqueta"> tech 1</span>
+        <span class="etiqueta"> tech 2</span>
+        <span class="etiqueta"> tech 3</span>
+    </div>
+</div>
+     </article>
+
+         <!-- PROYECTO 2 -->
+     <article class="proyecto--card">
+<div class="proyecto--img">
+    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+</div>        
+<div class="proyecto--data">
+    <h3> Nombre del proyecto</h3>
+    <p> Producto digital resultante</p>
+    <div class="proyecto--tech">
+        <span class="etiqueta"> tech 1</span>
+        <span class="etiqueta"> tech 2</span>
+        <span class="etiqueta"> tech 3</span>
+    </div>
+</div>
+     </article>
+
+         <!-- PROYECTO 3 -->
+     <article class="proyecto--card">
+<div class="proyecto--img">
+    <img src="https://images.pexels.com/photos/38568/apple-imac-ipad-workplace-38568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+</div>        
+<div class="proyecto--data">
+    <h3> Nombre del proyecto</h3>
+    <p> Producto digital resultante</p>
+    <div class="proyecto--tech">
+        <span class="etiqueta"> tech 1</span>
+        <span class="etiqueta"> tech 2</span>
+        <span class="etiqueta"> tech 3</span>
+    </div>
+</div>
+     </article>
+
 </div>
 
-<div>
-    este div no tiene un párrafo
-</div>
+</section>
 
 
-<label>
-    <input type="checkbox">
-    haceme click vato
-</label>
+<!-- nuestras habilidades -->
 
+<section id="habilidades" class="habilidades">
+<h2> de que somos capaces</h2>
 
+<section class="habilidades--container">
 
-<table border="1">
-<tr>
-    <td>nombre</td>
-    <td>apellido</td>
-</tr>
-<tr>
-    <td>pampa</td>
-    <td>labs</td>
-</tr>
-</table>
-
-<p>esta tabla tiene datos</p>
-
-<table border="1"></table>
-
-<p> esta tabla no tiene datos </p>
-
-
-
-
-
-<h1> Ejemplo de pseudoclase :IS</h1>
-<h2> vamos a ahorrar muchas lineas de codigo</h2>
-<h3> curso de css avanzado</h3>
-
-
-<article>
-    <p> leer mas acerca de este articulo en <a href="#"> platzi</a></p>
+<article class="item--habilidades">
+    <h3> talento 01</h3>
+    <p> descripción</p>
 </article>
 
-<section>
-   <p> leer mas acerca de este articulo en <a href="#"> platzi</a></p>
+<article class="item--habilidades">
+    <h3> talento 02</h3>
+    <p> descripción</p>
+</article>
+
+<article class="item--habilidades">
+    <h3> talento 03</h3>
+    <p> descripción</p>
+</article>
+
+<article class="item--habilidades">
+    <h3> talento 05</h3>
+    <p> descripción</p>
+</article>
+
+<article class="item--habilidades">
+    <h3> talento 05</h3>
+    <p> descripción</p>
+</article>
+
 </section>
 
-<aside>
-   <p> leer mas acerca de este articulo en <a href="#"> platzi</a></p>
-</aside>
+</section>
 
 
-<div>
-   <p> leer mas acerca de este articulo en <a href="#"> platzi</a></p>
+<!-- contacto: formularios -->
+
+<section  id="contacto" class="contacto--container">
+
+
+<form class="formulario--contacto">
+
+    <div class="grupo--formulario">
+        <label for="Nombre"> Nombre </label>
+        <input type="text" id="nombre" class="control--formulario" required>
+    </div>
+
+
+        <div class="grupo--formulario">
+        <label for="email"> E Mail</label>
+        <input type="email" id="email" class="control--formulario" required>
+    </div>
+
+
+        <div class="grupo--formulario">
+        <label for="Mensaje"> Mensaje </label>
+        <textarea id="mensaje" class="control--formulario" required></textarea>
+
+    </div>
+
+
+<button type="submit" class="cta-button"> Enviar Mensaje</button>
+
+
+</form>
+    
+</section>
+
+
+
+</main>
+
+<!-- pie de pagina: enlace a redes -->
+
+<footer class="footer">
+
+<div class="social--media">
+ <a href=""> Github</a></li>
+<a href=""> Linkedin</a> </li>
+<a href=""> IG</a> </li>
 </div>
-
-
-
-
-
-<section class="destacado">
-Esta seccion es una seccion destacada. 
-</section>
-
-<section>
-Esta seccion es una seccion normal. 
-</section>
-
-
-
-
-<p>este parrafo va a tener un estilo particular</p>
-<p class="distinto"> este parrafo quiero que sea distinto, obviamente</p>
-<p> este parrafo quiero que tenga el mismo estilo que el primero</p>
-
-
-
-<div>
-    <p>un parrafo</p>
-    <span>segundo parrafo</span>
-    <p>tercero parrafo</p>
-    <p>cuarto parrafo</p>
-    <p>quinto parrafo</p>
-    <p>sexto parrafo</p>
-</div>
-
-
-
-
+<p> &copy; 2025 Pampa Labs - Patagonia Argentina </p>
+</footer>
 
 </body>
 </html>
