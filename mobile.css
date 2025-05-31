@@ -65,10 +65,6 @@ width: 100%;
 max-width: 1280px;
 margin: 0 auto;
 padding: var(--spacing-big);
-background-image: url(./portada.jpg);
-object-fit: cover;
-opacity: .999;
-border-radius: var(--radius);
 }
 
 /* SECCION NAVEGACION */
@@ -88,6 +84,60 @@ margin: var(--spacing-xs);
 border-radius: var(--radius);
 background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%);
 }
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn{
+    background: transparent;
+    color: var(--background-dark);
+    padding: var(--spacing-xs);
+    border: none;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    position:absolute;
+    top:104px;
+    left: -5rem;
+    margin: 0 auto;
+    width: 320px;
+    background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%);
+    padding: var(--spacing-xs);
+    list-style: none;
+    border: .01rem solid color-mix(in oklab, var(--primary-color) 80%, transparent 100%);
+    border-radius: 8px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.1s, transform 0.2s;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: var(--background-dark);
+}
+
+.menu:hover .menu-list, .menu:focus-within .menu-list{
+opacity:1;
+transform: scaleY(1);
+background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%);
+}
+
+
+
 
 .nav--links{
     display: flex;
@@ -185,7 +235,7 @@ view-timeline-axis: block;
 border-radius: var(--radius);
 overflow: hidden;
 background-color: var(--background-light);
-box-shadow: 0 4px 8px rgba(0,0,0,.1);
+box-shadow: 0 1px 2px rgba(0,0,0,.1);
 content-visibility: auto;
 contain-intrinsic-size: 0 300px;
 transition: transform 0.3s ease;
@@ -193,7 +243,7 @@ transition: transform 0.3s ease;
 
 .proyecto--card:hover{
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,.333);
+    box-shadow: 0 4px 16px rgba(0,0,0,.111);
 }
 
 .proyectos--grid{
