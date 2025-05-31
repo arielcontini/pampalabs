@@ -18,6 +18,7 @@ EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
     --spacing-md: clamp(.96rem, 0.96rem + 0.56vw, 1.6rem);
     --spacing-xl: clamp(1.6rem, 1.6rem + 0.56vw, 2.4rem);
     --spacing-xxl: clamp(2.4rem, 2.4rem + 0.56vw, 3.2rem);
+    --spacing-big: clamp(3.2rem, 3.64rem + 0.56vw, 4.8rem);
 
     --radius: .8rem;
 
@@ -43,7 +44,7 @@ body{
 font-family: "Poppins", sans-serif;
 font-style: normal;
 color: var(--cuaternary-color);
-line-height: 1.6rem;
+line-height: 2.4rem;
 background-color: var(--background-light);
 scroll-behavior: smooth;
 }
@@ -63,13 +64,13 @@ container-name: principal;
 width: 100%;
 max-width: 1280px;
 margin: 0 auto;
-padding: var(--spacing-md);
+padding: var(--spacing-big);
 }
 
 /* SECCION NAVEGACION */
 
 header{
-padding: var(--spacing-xl);
+padding: var(--spacing-xxl);
 text-align: center;
 }
 
@@ -81,7 +82,7 @@ align-items: center;
 padding: var(--spacing-xs) var(--spacing-md);
 margin: var(--spacing-xs);
 border-radius: var(--radius);
-background-color: color-mix(in oklab, var(--primary-color) 50%, var(--secondary-color) 77%);
+background-color: color-mix(in oklab, var(--primary-color) 7%, transparent);
 }
 
 .nav--links{
@@ -99,7 +100,7 @@ background-color: color-mix(in oklab, var(--primary-color) 50%, var(--secondary-
 
 :is(.nav--links a:hover, .nav--links a:focus){
  background-color: var(--tertiary-color); 
- color: var(--secondary-color);
+ color: var(--cuaternary-color);
  transition: all 0.9 ease;  
 
 }
@@ -407,6 +408,12 @@ text-align: center;
 @container principal (max-width:480px){
     .item--habilidades{
         width: 96%;
+    }
+    .hero h1{
+    line-height: var(--spacing-xxl);
+}
+    .hero p{
+        line-height: var(--spacing-xxl);
     }
 }
 
