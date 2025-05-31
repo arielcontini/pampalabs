@@ -82,7 +82,7 @@ align-items: center;
 padding: var(--spacing-xs) var(--spacing-md);
 margin: var(--spacing-xs);
 border-radius: var(--radius);
-background-color: color-mix(in oklab, var(--primary-color) 7%, transparent);
+background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%);
 }
 
 .nav--links{
@@ -119,6 +119,7 @@ overflow: hidden;
     font-size: var(--titulo);
     margin-bottom: var(--spacing-md);
     --color-destacado: var(var(var(--secondary-color)));
+    line-height: 2.4rem;
 }
 
 .hero:has(.cta-button:hover) h1{
@@ -255,14 +256,14 @@ font-size: var(--parrafo-sm);
 
 .habilidades{
 padding: var(--spacing-xl);
-background-color: color-mix(in oklch, var(--primary-color) 10%, var(--background-light));
+background-color: color-mix(in oklch, var(--primary-color) 10%, var(--background-light)90%);
 border-radius: var(--radius);
 }
 
 .habilidades h2{
     font-size: var(--subtitulo);
     text-align: center;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
 }
 
 .habilidades--container{
@@ -270,6 +271,7 @@ display: flex;
 flex-wrap: wrap;
 gap: var(--spacing-md);
 justify-content: center;
+
 }
 
 .item--habilidades{
@@ -395,7 +397,13 @@ text-align: center;
 /* ======= CONTAINER QUERIES ======= */
 
 @container principal (max-width: 768px){
+.hero h1{
+    line-height: 3.2rem;
+}
 
+.hero p{
+    line-height: 3.2rem;
+}
     .proyectos--grid{
         grid-template-columns: 1fr;
     }
@@ -410,11 +418,13 @@ text-align: center;
         width: 96%;
     }
     .hero h1{
-    line-height: var(--spacing-xxl);
+    line-height: 2.4rem;
 }
     .hero p{
-        line-height: var(--spacing-xxl);
+        line-height: 2.4rem;
     }
+
+
 }
 
 
@@ -422,6 +432,8 @@ text-align: center;
     .nav--links{
         gap: var(--spacing-xs);
     }
+
+
 }
 
 @media (max-width: 560px){
