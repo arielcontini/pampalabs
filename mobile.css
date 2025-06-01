@@ -70,7 +70,7 @@ padding: var(--spacing-big);
 /* SECCION NAVEGACION */
 
 header{
-padding: var(--spacing-xxl);
+padding: var(--spacing-xl);
 text-align: center;
 }
 
@@ -99,6 +99,7 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
     color: var(--background-dark);
     padding: var(--spacing-xs);
     border: none;
+    cursor: pointer;
 }
 
 .menu-list{
@@ -107,17 +108,17 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: auto;
     position:absolute;
     top:104px;
-    left: -5rem;
+    left: 0;
     margin: 0 auto;
-    width: 320px;
+    width: 100%;
+    height: auto;
     background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%);
-    padding: var(--spacing-xs);
+    padding: var(--spacing-ms);
     list-style: none;
     border: .01rem solid color-mix(in oklab, var(--primary-color) 80%, transparent 100%);
-    border-radius: 8px;
+    border-radius: var(--radius);
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -128,6 +129,16 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
 a{
     text-decoration: none;
     color: var(--background-dark);
+    cursor: pointer;
+}
+
+a:hover{
+color: var(--primary-color);
+cursor: pointer;
+}
+
+a:focus-within{
+    color: var(--primary-color);
 }
 
 .menu:hover .menu-list, .menu:focus-within .menu-list{
@@ -164,16 +175,30 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
 
 .hero{
 position:relative;
-padding: var(--spacing-xxl) 0;
+padding: var(--spacing-xs) 0;
 text-align: center;
 overflow: hidden;
-background-color: transparent;
+margin: 0 auto;
+border-radius: var(--radius);
 }
+
+.logo-pampa{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 333px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
 
 .hero h1{
     font-size: var(--titulo);
     margin-bottom: var(--spacing-md);
-    --color-destacado: var(var(var(--secondary-color)));
+    --color-destacado: var(var(--secondary-color));
     line-height: 2.4rem;
 }
 
@@ -189,7 +214,7 @@ background-color: transparent;
 .hero p{
     font-size: var(--titulo);
     max-width: 800px;
-    margin: 0 auto var(--spacing-xl); 
+    margin: 0 auto var(--spacing-md); 
     line-height: 1.6rem;
 }
 
