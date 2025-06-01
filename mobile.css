@@ -63,8 +63,9 @@ container-type: inline-size;
 container-name: principal;
 width: 100%;
 max-width: 1280px;
+height: auto;
 margin: 0 auto;
-padding: var(--spacing-big);
+padding: var(--spacing-big) 0;
 }
 
 /* SECCION NAVEGACION */
@@ -75,14 +76,14 @@ text-align: center;
 }
 
 .nav--menu{
-width: 100%;
+width: 40%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: var(--spacing-xs) var(--spacing-md);
+padding: var(--spacing-xs) 0;
 margin: var(--spacing-xs);
 border-radius: var(--radius);
-background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%);
+background-color: color-mix(in oklab, var(--primary-color) 3%, transparent 100%);
 }
 
 .menu{
@@ -92,6 +93,7 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
     align-items: center;
     position: relative;
     display: inline-block;
+    padding: 0 0 ;
 }
 
 .menu-btn{
@@ -100,6 +102,8 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
     padding: var(--spacing-xs);
     border: none;
     cursor: pointer;
+    padding: 0 0;
+    margin: 0 auto;
 }
 
 .menu-list{
@@ -109,7 +113,7 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
     align-items: center;
     text-align: center;
     position:absolute;
-    top:104px;
+    top:104 px;
     left: 0;
     margin: 0 auto;
     width: 100%;
@@ -175,7 +179,6 @@ background-color: color-mix(in oklab, var(--primary-color) 8%, transparent 100%)
 
 .hero{
 position:relative;
-padding: var(--spacing-xs) 0;
 text-align: center;
 overflow: hidden;
 margin: 0 auto;
@@ -186,7 +189,7 @@ border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 333px;
+    max-width: 320px;
     height: auto;
     align-items: center;
     justify-content: center;
