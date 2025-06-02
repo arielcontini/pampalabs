@@ -235,6 +235,7 @@ border: none;
 }
 
 .cta-button:hover{
+color: var(--background-dark);
 transform: scale(calc( 1 + 0.056));
 box-shadow: 0 4px 5px rgba(32, 2, 2, 0.222) ;
 }
