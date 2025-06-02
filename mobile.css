@@ -266,7 +266,6 @@ view-timeline-axis: block;
 background-color: var(--background-light);
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
-
 }
 
 .proyectos h2{
@@ -277,6 +276,7 @@ margin: var(--spacing-xs) 0;
     animation: aparecer linear;
     animation-timeline: --scroll-proyectos;
     animation-range: entry 10% cover 20%;
+    color: var(--background-dark);
 }
 
 .proyecto--card{
