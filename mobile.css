@@ -266,6 +266,7 @@ view-timeline-axis: block;
 background-color: var(--background-light);
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
+opacity: .888;
 }
 
 .proyectos h2{
@@ -287,6 +288,8 @@ box-shadow: 0 1px 2px rgba(0,0,0,.1);
 content-visibility: auto;
 contain-intrinsic-size: 0 300px;
 transition: transform 0.3s ease;
+border: .001rem solid var(--background-light);
+opacity: .9;
 }
 
 .proyecto--card:hover{
@@ -363,6 +366,7 @@ padding: var(--spacing-xl);
 background-color: color-mix(in oklch, var(--primary-color) 10%, var(--background-light)90%);
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
+opacity: .888;
 }
 
 .habilidades h2{
@@ -425,6 +429,7 @@ text-align: center;
 background-color: var(--background-light);
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
+opacity: .888;
 }
 
 .contacto--container h2{
@@ -524,15 +529,20 @@ text-align: center;
 
 @container principal (max-width:480px){
 
+    .hero{
+        padding: var(--spacing-xs);
+    }
 
     .item--habilidades{
         width: 96%;
     }
     .hero h1{
-    line-height: 2.4rem;
+    font-size: var(--subtitulo);
+    line-height: 1.6rem;
 }
     .hero p{
-        line-height: 2.4rem;
+       font-size: var(--parrafo-sm);
+         line-height: 1.6rem;
     }
 }
 
@@ -564,7 +574,7 @@ text-align: center;
 
 
 .contacto--container{
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xs);
 }
 
 }
