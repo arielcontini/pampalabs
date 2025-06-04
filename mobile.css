@@ -4,7 +4,7 @@
 /* ROOT DE CLASES Y SISTEMA DE DISEÑO */
 
 :root{
-    --primary-color: oklch(0.7 0.1825 29.12);
+    --primary-color: oklch(0.666 0.1825 29.12);
     --secondary-color: oklch(0.8397 0.0888 220.76);
     --tertiary-color: oklch(0.7311 0.0614 18.66); 
     --cuaternary-color: oklch(0.1338 0.0271 29.12); 
@@ -69,7 +69,7 @@ width: 100%;
 max-width: 1280px;
 height: auto;
 margin: 0 auto;
-padding: var(--spacing-md);
+padding: var(--spacing-xs);
 }
 
 /* SECCION NAVEGACION */
@@ -311,6 +311,9 @@ gap: var(--spacing-md);
 grid-template-columns: repeat(auto-fit, minmax(320px , 1fr));
 }
 
+
+
+
 .proyecto--img{
 height: 240px;
 position: relative;
@@ -364,6 +367,158 @@ background-color: color-mix(in oklch, var(--secondary-color) 33.3%, var(--backgr
 padding: calc(var(--spacing-xs) / 2 ) var(--spacing-xs);
 border-radius: var(--radius);
 font-size: var(--parrafo-sm);
+}
+
+
+
+
+
+.problem--container{
+padding: var(--spacing-big) var(--spacing-md);
+view-timeline-name: --scroll-proyectos;
+view-timeline-axis: block;
+border-radius: var(--radius);
+margin: var(--spacing-xs) 0;
+}
+
+.problem--container h2{
+    font-size: var(--subtitulo);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    /* animacion basada en scroll utilizando timeline */
+    animation: aparecer linear;
+    animation-timeline: --scroll-proyectos;
+    animation-range: entry 10% cover 20%;
+    color:var(--primary-color);
+}
+
+.problem--grid{
+display: grid;
+gap: 0;
+grid-template-columns: repeat(auto-fit, minmax(480px , 1fr));
+}
+
+.problem--card{
+color: rgba(96, 11, 11, 0.333);
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
+content-visibility: auto;
+contain-intrinsic-size: 0 300px;
+transition: transform 0.5s ease;
+/* border: .001rem solid var(--background-dark); */
+opacity: .9;
+transition: all .5s;
+width: 100%;
+min-height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.problem--card:hover , .problem--card:focus-within{
+    color: var(--background-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    background-color: var(--primary-color);
+    opacity: 1;
+    transition: all .5s;
+}
+
+.problem--data{
+padding: var(--spacing-md);
+text-align: right;
+}
+
+.problem--data h3{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: var(--subtitulo);
+    margin-bottom: var(--spacing-md);
+}
+
+.problem--data p{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: var(--parrafo);
+    margin-bottom: var(--spacing-sm);
+}
+
+
+.problem--img{
+height: 240px;
+position: relative;
+overflow: hidden;
+mix-blend-mode: multiply;
+}
+
+.problem--img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: multiply;
+    filter:grayscale(50%);
+    transition: all 0.3s ease;
+}
+
+
+.problem--card:hover .proyecto--img img{
+    filter: grayscale(0%);
+    mix-blend-mode: normal;
+    transition: all 0.333 ease;
+}
+
+.solution--card{
+color: rgba(221, 140, 122, 0.333);
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
+content-visibility: auto;
+contain-intrinsic-size: 0 300px;
+transition: transform 0.5s ease;
+/* border: .001rem solid var(--background-dark); */
+opacity: 1;
+width: 100%;
+min-height: 400px;
+text-align: left;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.solution--card:hover , .problem--card:focus-within{
+    color: var(--background-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    background-color: var(--primary-color);
+    transition: all .5s;
+}
+
+
+.solution--data{
+padding: var(--spacing-md);
+}
+
+.solution--data h3{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: var(--subtitulo);
+    margin-bottom: var(--spacing-md);
+}
+
+.solution--data p{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: var(--parrafo);
+    margin-bottom: var(--spacing-sm);
+}
+
+
+.solution--card:hover .solution--img img{
+    filter: grayscale(0%);
+    mix-blend-mode: normal;
+    transition: all 0.333 ease;
 }
 
 
