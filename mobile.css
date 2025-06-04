@@ -8,7 +8,7 @@
     --secondary-color: oklch(0.8397 0.0888 220.76);
     --tertiary-color: oklch(0.7311 0.0614 18.66); 
     --cuaternary-color: oklch(0.1338 0.0271 29.12); 
-    --background-light: oklch(0.9515 0.0123 18.66);  /* casi blanco */
+    --background-light: oklch(0.9115 0.0123 18.66);  /* casi blanco */
     --background-dark: oklch(0.1723 0.0123 18.66);  /* casi negro */
 
 /* USAMOS CLAMP PARA TAMAÑOS DE FUENTES RESPONSIVOS QUE SE AJUSTAN AUTOMATICAMENTE BASADOS
