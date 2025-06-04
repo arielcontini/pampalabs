@@ -50,6 +50,7 @@ line-height: 2.4rem;
 background: linear-gradient(168deg, rgba(237, 232, 232, 1) 1%, rgba(100, 79, 102, 0.185) 19%, rgb(240, 104, 80) 51%, rgba(15, 12, 12, 1) 100%, rgba(15, 13, 13, 1) 100%); */
 scroll-behavior: smooth;
 font-size: 62,7%;
+background-color: var(--background-light);
 }
 
 img{
@@ -274,7 +275,6 @@ view-timeline-axis: block;
 background-color: var(--background-light);
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
-opacity: .888;
 }
 
 .proyectos h2{
