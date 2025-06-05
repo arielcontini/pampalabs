@@ -416,11 +416,11 @@ justify-content: center;
 align-items: center;
 }
 
-.problem--card:hover , .problem--card:focus-within{
+.problem--card:hover{
     color: var(--background-dark);
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0,0,0,.1);
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
     opacity: 1;
     transition: all .5s;
 }
@@ -428,6 +428,7 @@ align-items: center;
 .problem--data{
 padding: var(--spacing-md);
 text-align: right;
+line-height: 3.2rem;
 }
 
 .problem--data h3{
@@ -498,6 +499,7 @@ align-items: center;
 
 .solution--data{
 padding: var(--spacing-md);
+line-height: 3.2rem;
 }
 
 .solution--data h3{
