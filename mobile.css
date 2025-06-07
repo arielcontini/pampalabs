@@ -4,12 +4,12 @@
 /* ROOT DE CLASES Y SISTEMA DE DISEÑO */
 
 :root{
-    --primary-color: oklch(0.666 0.1825 29.12);
+    --primary-color: oklch(0.6463 0.240916 32.6151);
     --secondary-color: oklch(0.8397 0.0888 220.76);
     --tertiary-color: oklch(0.7311 0.0614 18.66); 
     --cuaternary-color: oklch(0.1338 0.0271 29.12); 
-    --background-light: oklch(0.9115 0.0123 18.66);  /* casi blanco */
-    --background-dark: oklch(0.1723 0.0123 18.66);  /* casi negro */
+    --background-light: oklch(97.23 0 223.97);  /* casi blanco */
+    --background-dark: oklch(0.1118 0.0173 29.65);  /* casi negro */
 
 /* USAMOS CLAMP PARA TAMAÑOS DE FUENTES RESPONSIVOS QUE SE AJUSTAN AUTOMATICAMENTE BASADOS
 EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
@@ -50,7 +50,7 @@ line-height: 2.4rem;
 background: linear-gradient(168deg, rgba(237, 232, 232, 1) 1%, rgba(100, 79, 102, 0.185) 19%, rgb(240, 104, 80) 51%, rgba(15, 12, 12, 1) 100%, rgba(15, 13, 13, 1) 100%); */
 scroll-behavior: smooth;
 font-size: 62,7%;
-background-color: var(--background-light);
+background-color: var(--background-dark);
 }
 
 img{
@@ -108,7 +108,7 @@ background-color: transparent;
 
 .menu-btn{
     background: transparent;
-    color: var(--background-dark);
+    color: var(--background-light);
     padding: var(--spacing-xs);
     border: none;
     cursor: pointer;
@@ -123,7 +123,8 @@ background-color: transparent;
     margin: 0 auto;
     width: 100%;
     height: auto;
-    background-color: color-mix(in oklab, var(--primary-color) 99%, transparent 90%);
+    background-color: var(--background-dark);
+   /*  background-color: color-mix(in oklab, var(--primary-color) 99%, transparent 90%); */
     padding: var(--spacing-sm) 0;
     list-style: none;
     border: .01rem solid color-mix(in oklab, var(--primary-color) 100%, transparent 10%);
@@ -138,7 +139,7 @@ background-color: transparent;
 
 a{
     text-decoration: none;
-    color: var(--background-dark);
+    color: var(--background-light);
     cursor: pointer;
 }
 
@@ -154,7 +155,8 @@ a:focus-within{
 .menu:hover .menu-list, .menu:focus-within .menu-list{
 opacity:1;
 transform: scaleY(1);
-background-color: color-mix(in oklab, var(--background-light) 100%, transparent 10%);
+background-color: var(--background-dark);
+/* background-color: color-mix(in oklab, var(--background-light) 100%, transparent 10%); */
 }
 
 
@@ -200,6 +202,7 @@ margin: var(--spacing-big) auto;
     height: auto;
     padding: var(--spacing-xs) 0;
     font-size: var(--subtitulo);
+    color: var(--background-light);
 }
 
 .logo-pampa{
@@ -222,8 +225,9 @@ margin: var(--spacing-big) auto;
     font-style: normal;
     font-size: var(--titulo);
     margin-bottom: var(--spacing-md);
-    --color-destacado: var(var(--secondary-color));
+    --color-destacado: var(var(--background-light));
     line-height: 3.2rem;
+    color: var(--background-light);
 }
 
 .hero:has(.cta-button:hover) h1{
@@ -239,8 +243,9 @@ margin: var(--spacing-big) auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--titulo);
     max-width: 800px;
-    margin: 0 auto var(--spacing-md); 
-    line-height: 1.6rem;
+    margin: 0 auto var(--spacing-xl); 
+    line-height: 2.4rem;
+    color: var(--background-light);
 }
 
 .cta-button{
@@ -270,7 +275,7 @@ box-shadow: 0 4px 5px rgba(32, 2, 2, 0.222) ;
 padding: var(--spacing-big) var(--spacing-md);
 view-timeline-name: --scroll-proyectos;
 view-timeline-axis: block;
-background-color: var(--background-light);
+background-color: var(--background-dark);
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
 }
@@ -283,7 +288,7 @@ margin: var(--spacing-xs) 0;
     animation: aparecer linear;
     animation-timeline: --scroll-proyectos;
     animation-range: entry 10% cover 20%;
-    color: var(--background-dark);
+    color: var(--primary-color);
 }
 
 .proyecto--card{
@@ -393,11 +398,11 @@ margin: var(--spacing-xs) 0;
 .problem--grid{
 display: grid;
 gap: 0;
-grid-template-columns: repeat(auto-fit, minmax(480px , 1fr));
+grid-template-columns: repeat(auto-fit, minmax(560px , 1fr));
 }
 
 .problem--card{
-color: rgba(255, 102, 102, 0.666);
+color: rgba(255, 102, 102, 0.7);
 border-radius: var(--radius);
 overflow: hidden;
 box-shadow: 0 1px 2px rgba(0,0,0,.05);
@@ -415,10 +420,10 @@ align-items: center;
 }
 
 .problem--card:hover{
-    color: var(--background-dark);
+    color: var(--background-light);
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0,0,0,.1);
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     opacity: 1;
     transition: all .5s;
 }
@@ -487,7 +492,7 @@ align-items: center;
 }
 
 .solution--card:hover , .problem--card:focus-within{
-    color: var(--background-dark);
+    color: var(--background-light);
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0,0,0,.1);
     background-color: var(--primary-color);
@@ -686,6 +691,10 @@ text-align: center;
     }
     .item--habilidades{
         width: calc(50% - var(--spacing-xs));
+    }
+
+    .problem--grid{
+        grid-template-columns: 1fr;
     }
 }
 
