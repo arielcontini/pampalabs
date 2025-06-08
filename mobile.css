@@ -4,6 +4,7 @@
 /* ROOT DE CLASES Y SISTEMA DE DISEÑO */
 
 :root{
+    color-scheme: light dark;
     --primary-color: oklch(0.6463 0.240916 32.6151);
     --secondary-color: oklch(0.8397 0.0888 220.76);
     --tertiary-color: oklch(0.7311 0.0614 18.66); 
@@ -44,13 +45,13 @@ EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
 body{
 font-family: Arial, Helvetica, sans-serif;
 font-style: normal;
-color: var(--cuaternary-color);
 line-height: 2.4rem;
 /* background: var(--background-dark);
 background: linear-gradient(168deg, rgba(237, 232, 232, 1) 1%, rgba(100, 79, 102, 0.185) 19%, rgb(240, 104, 80) 51%, rgba(15, 12, 12, 1) 100%, rgba(15, 13, 13, 1) 100%); */
 scroll-behavior: smooth;
 font-size: 62,7%;
-background-color: var(--background-dark);
+background-color: light-dark( var(--background-light) var(--background-dark));
+color: light-dark( var(--background-dark) var(--background-light));
 }
 
 img{
@@ -79,6 +80,7 @@ text-align: center;
 width: 100%;
 height: auto;
 max-height: 320px;
+background-color: light-dark( var(--background-light) var(--background-dark));
 }
 
 .nav--menu{
@@ -89,7 +91,7 @@ align-items: center;
 padding: var(--spacing-xs) 0;
 margin: var(--spacing-xs);
 border-radius: var(--radius);
-background-color: transparent;
+background-color: light-dark( var(--background-light) var(--background-dark));
 /* color-mix(in oklab, var(--primary-color) 3%, transparent 100%); */
 }
 
@@ -103,12 +105,13 @@ background-color: transparent;
     display: inline-block;
     padding: 0 0;
     margin: 0 auto;
-
+    background-color: light-dark( var(--background-light) var(--background-dark));
 }
 
 .menu-btn{
     background: transparent;
-    color: var(--background-light);
+    color: light-dark( var(--background-dark) var(--background-light));
+    background-color: light-dark( var(--background-light) var(--background-dark));
     padding: var(--spacing-xs);
     border: none;
     cursor: pointer;
@@ -123,24 +126,26 @@ background-color: transparent;
     margin: 0 auto;
     width: 100%;
     height: auto;
-    background-color: var(--background-dark);
+    background-color: light-dark( var(--background-light) var(--background-dark));
+    color: light-dark( var(--background-dark) var(--background-light));
    /*  background-color: color-mix(in oklab, var(--primary-color) 99%, transparent 90%); */
     padding: var(--spacing-sm) 0;
     list-style: none;
-    border: .01rem solid color-mix(in oklab, var(--primary-color) 100%, transparent 10%);
+ /*    border: .01rem solid color-mix(in oklab, var(--primary-color) 100%, transparent 10%); */
     border-radius: var(--radius);
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
-    transition: opacity 0.1s, transform 0.1s;
+    transition: opacity .1s, transform 0.1s;
     font-weight: bold;
     z-index: 1000;
 }
 
 a{
     text-decoration: none;
-    color: var(--background-light);
+    color: light-dark( var(--background-dark) var(--background-light));;
     cursor: pointer;
+    background-color: light-dark( var(--background-light) var(--background-dark));
 }
 
 a:hover{
@@ -155,7 +160,7 @@ a:focus-within{
 .menu:hover .menu-list, .menu:focus-within .menu-list{
 opacity:1;
 transform: scaleY(1);
-background-color: var(--background-dark);
+background-color: light-dark( var(--background-light) var(--background-dark));
 /* background-color: color-mix(in oklab, var(--background-light) 100%, transparent 10%); */
 }
 
@@ -200,21 +205,22 @@ margin: var(--spacing-big) auto;
     font-weight: 600;
     width:100%;
     height: auto;
-    padding: var(--spacing-xs) 0;
+    padding: var(--spacing-xl) 0;
     font-size: var(--subtitulo);
-    color: var(--background-light);
+    color: light-dark( var(--background-dark) var(--background-light));;
 }
 
 .logo-pampa{
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: 240px;
     height: auto;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     cursor: pointer;
+    padding: var(--spacing-xs);
 }
 
 
@@ -227,7 +233,7 @@ margin: var(--spacing-big) auto;
     margin-bottom: var(--spacing-md);
     --color-destacado: var(var(--background-light));
     line-height: 3.2rem;
-    color: var(--background-light);
+    color: light-dark( var(--background-light) var(--background-dark));
 }
 
 .hero:has(.cta-button:hover) h1{
@@ -245,7 +251,7 @@ margin: var(--spacing-big) auto;
     max-width: 800px;
     margin: 0 auto var(--spacing-xl); 
     line-height: 2.4rem;
-    color: var(--background-light);
+    color: light-dark( var(--background-dark) var(--background-light));;
 }
 
 .cta-button{
@@ -275,7 +281,7 @@ box-shadow: 0 4px 5px rgba(32, 2, 2, 0.222) ;
 padding: var(--spacing-big) var(--spacing-md);
 view-timeline-name: --scroll-proyectos;
 view-timeline-axis: block;
-background-color: var(--background-dark);
+background-color: light-dark( var(--background-light) var(--background-dark));
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
 }
@@ -294,13 +300,13 @@ margin: var(--spacing-xs) 0;
 .proyecto--card{
 border-radius: var(--radius);
 overflow: hidden;
-background-color: var(--background-light);
+background-color: light-dark( var(--background-light) var(--background-dark));
 box-shadow: 0 1px 2px rgba(0,0,0,.1);
 content-visibility: auto;
 contain-intrinsic-size: 0 300px;
 transition: transform 0.3s ease;
 border: .001rem solid var(--background-light);
-opacity: .9;
+opacity: 1;
 }
 
 .proyecto--card:hover{
@@ -313,9 +319,6 @@ display: grid;
 gap: var(--spacing-md);
 grid-template-columns: repeat(auto-fit, minmax(320px , 1fr));
 }
-
-
-
 
 .proyecto--img{
 height: 240px;
@@ -349,11 +352,13 @@ padding: var(--spacing-md);
 .proyecto--data h3{
     font-size: var(--subtitulo);
     margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
 }
 
 .proyecto--data p{
     font-size: var(--parrafo);
     margin-bottom: var(--spacing-sm);
+    color: light-dark( var(--background-light) var(--background-dark));
 }
 
 .proyecto--tech{
@@ -361,6 +366,7 @@ display: flex;
 flex-wrap: wrap;
 gap:var(--spacing-xs);
 margin-top: var(--spacing-xs);
+color: var(--background-dark);
 }
 
 
@@ -392,7 +398,7 @@ margin: var(--spacing-xs) 0;
     animation: aparecer linear;
     animation-timeline: --scroll-proyectos;
     animation-range: entry 10% cover 20%;
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
 
 .problem--grid{
@@ -594,7 +600,7 @@ animation-range: entry 20% cover 50%;
 .contacto--container{
 padding: var(--spacing-xl) 0 ;
 text-align: center;
-background-color: var(--background-light);
+background-color: light-dark( var(--background-light) var(--background-dark));
 border-radius: var(--radius);
 margin: var(--spacing-xs) 0;
 opacity: .888;
@@ -603,6 +609,7 @@ opacity: .888;
 .contacto--container h2{
     font-size: var(--subtitulo);
     margin-bottom: var(--spacing-xs);
+    color: light-dark( var(--background-light) var(--background-dark));
 }
 .formulario--contacto{
 max-width: 640px;
@@ -645,8 +652,8 @@ font-size: var(--parrafo);
 
 .footer{
 padding: var(--spacing-xxl) 0 ;
-background-color: var(--background-dark);
-color:var(--background-light);
+background-color: light-dark( var(--background-dark) var(--background-light));
+color: light-dark( var(--background-dark) var(--background-light));;
 text-align: center;
 
 }
@@ -668,7 +675,7 @@ text-align: center;
 }
 
 .social--media a {
-    color: var(--background-light);
+    color: light-dark( var(--background-dark) var(--background-light));;
     text-decoration: none;
     transition: transform 0.3 ease;
 }
