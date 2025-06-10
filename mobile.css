@@ -23,7 +23,6 @@ EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
     --spacing-big: clamp(3.2rem, 3.64rem + 0.56vw, 4.8rem);
 
     --radius: .8rem;
-
     --primary-font:#;
     --secondary-font:#;
     --general-padding: 1.6rem;
@@ -104,7 +103,7 @@ background-color: light-dark( var(--background-light) var(--background-dark));
     position: relative;
     display: inline-block;
     padding: 0 0;
-    margin: 0 auto;
+    margin: var(--general-margin);
     background-color: light-dark( var(--background-light) var(--background-dark));
 }
 
@@ -116,14 +115,14 @@ background-color: light-dark( var(--background-light) var(--background-dark));
     border: none;
     cursor: pointer;
     padding: var(--spacing-xs) 0;
-    margin: 0 auto;
+  margin: var(--general-margin);
     font-size: var(--parrafo);
 }
 
 .menu-list{
     position:absolute;
     top:50px;
-    margin: 0 auto;
+     margin: var(--general-margin);
     width: 100%;
     height: auto;
     background-color: light-dark( var(--background-light) var(--background-dark));
@@ -194,7 +193,7 @@ background-color: light-dark( var(--background-light) var(--background-dark));
 position:relative;
 text-align: center;
 overflow: hidden;
-margin: 0 auto;
+margin: var(--general-margin);
 border-radius: var(--radius);
 margin: var(--spacing-big) auto;
 }
@@ -218,7 +217,7 @@ margin: var(--spacing-big) auto;
     height: auto;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: var(--general-margin);
     cursor: pointer;
     padding: var(--spacing-xs);
 }
@@ -249,7 +248,7 @@ margin: var(--spacing-big) auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--titulo);
     max-width: 800px;
-    margin: 0 auto var(--spacing-xl); 
+    margin: var(--general-margin) var(--spacing-xl); 
     line-height: 2.4rem;
     color: light-dark( var(--background-dark) var(--background-light));;
 }
@@ -613,7 +612,7 @@ opacity: .888;
 }
 .formulario--contacto{
 max-width: 640px;
-margin: 0 auto;
+margin: var(--general-margin);
 }
 
 .grupo--formulario{
