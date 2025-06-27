@@ -455,7 +455,7 @@ align-items: center;
 .problem--data{
 padding: var(--spacing-md);
 text-align: right;
-line-height: 3.2rem;
+line-height: 2.4rem;
 }
 
 .problem--data h3{
@@ -470,6 +470,7 @@ line-height: 3.2rem;
     font-style: normal;
     font-size: var(--parrafo);
     margin-bottom: var(--spacing-sm);
+    padding: .16rem;
 }
 
 
@@ -526,7 +527,7 @@ align-items: center;
 
 .solution--data{
 padding: var(--spacing-md);
-line-height: 3.2rem;
+line-height: 2.4rem;
 }
 
 .solution--data h3{
@@ -541,6 +542,7 @@ line-height: 3.2rem;
     font-style: normal;
     font-size: var(--parrafo);
     margin-bottom: var(--spacing-sm);
+    padding: .16rem;
 }
 
 
