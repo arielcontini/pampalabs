@@ -458,7 +458,7 @@ align-items: center;
 .problem--data{
 padding: var(--spacing-md);
 text-align: right;
-line-height: 2.4rem;
+line-height: 1.6rem;
 }
 
 .problem--data h3{
@@ -530,7 +530,7 @@ align-items: center;
 
 .solution--data{
 padding: var(--spacing-md);
-line-height: 2.4rem;
+line-height: 1.6rem;
 }
 
 .solution--data h3{
