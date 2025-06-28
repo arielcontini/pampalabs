@@ -111,8 +111,8 @@ z-index: 1000;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 100%;
-    height: auto;
+    width: 64px;
+    height: 64px;
     background: transparent;
     color: light-dark( var(--background-dark) var(--background-light));
     background-color: light-dark( var(--background-light) var(--background-dark));
@@ -160,7 +160,7 @@ a:focus-within{
 .menu:hover .menu-list, .menu:focus-within .menu-list{
 opacity:1;
 transform: scaleY(1);
-background-color: color-mix(in oklab, var(--primary-color) 100%, transparent 10%);
+background-color: color-mix(in oklab, var(--primary-color) 100%, transparent 8%);
 }
 
 
@@ -195,7 +195,7 @@ text-align: center;
 overflow: hidden;
 border-radius: var(--radius);
 margin: var(--spacing-big);
-padding: var(--spacing-xl) var(--spacing-xxl);
+padding: var(--spacing-big) var(--spacing-big);
 }
 
 
