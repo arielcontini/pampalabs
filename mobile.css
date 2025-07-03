@@ -211,7 +211,7 @@ padding: var(--spacing-big) var(--spacing-big);
     font-weight: 600;
     width:100%;
     height: auto;
-    padding: var(--spacing-xl) var(--spacing-xs);
+    padding: var(--spacing-big) var(--spacing-xs);
     font-size: var(--subtitulo);
     color: light-dark( var(--background-dark) var(--background-light));;
 }
@@ -226,7 +226,7 @@ padding: var(--spacing-big) var(--spacing-big);
     justify-content: center;
     margin: var(--general-margin);
     cursor: pointer;
-    padding: var(--spacing-xs);
+    padding: var(--spacing-md);
 }
 
 
