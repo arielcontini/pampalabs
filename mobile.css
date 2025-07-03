@@ -22,7 +22,7 @@ EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
     --spacing-xxl: clamp(2.4rem, 2.4rem + 0.56vw, 3.2rem);
     --spacing-big: clamp(3.2rem, 3.64rem + 0.56vw, 4.8rem);
 
-    --radius: .8rem;
+    --radius: 2.4rem;
     --primary-font:#;
     --secondary-font:#;
     --general-padding: 1.6rem;
@@ -220,7 +220,7 @@ padding: var(--spacing-big) var(--spacing-big);
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 240px;
+    max-width: 320px;
     height: auto;
     align-items: center;
     justify-content: center;
