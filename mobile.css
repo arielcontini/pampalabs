@@ -210,7 +210,7 @@ position:relative;
 text-align: center;
 overflow: hidden;
 margin: var(--spacing-big) auto;
-padding: var(--spacing-big) var(--spacing-big);
+padding: var(--spacing-big) var(--spacing-xs);
  background: var(--background-dark);
 background: linear-gradient(190deg,
   oklch(0.0969 0 0 / 1%) 33%,
@@ -773,6 +773,19 @@ text-align: center;
 
 @media (max-width:768px){
 
+    .logo-pampa{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-big) auto;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
     .contacto--container{
     padding: var(--spacing-xs);
 }
@@ -785,6 +798,19 @@ text-align: center;
 }
 
 @media (max-width: 560px){
+
+    .logo-pampa{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-big) auto;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
 
     .nav--menu{
         flex-direction: column;
