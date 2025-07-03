@@ -740,8 +740,21 @@ text-align: center;
 
 @container principal (max-width:480px){
 
+    .logo-pampa{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-big) auto;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
     .hero{
-        padding: var(--spacing-xs);
+        padding: var(--spacing-big);
     }
 
     .item--habilidades{
