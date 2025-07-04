@@ -211,7 +211,7 @@ text-align: center;
 overflow: hidden;
 margin: var(--spacing-big) auto;
 padding: var(--spacing-xxl) var(--spacing-xs);
- background-image: url(./bg4.webp);
+ background-image: url(./hero-bg.png);
  background-size:cover;
  width: 100%;
 
