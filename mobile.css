@@ -278,7 +278,7 @@ oklch(0.6958 0.204259 43.491 / 90%) 100%,
 
 .cta-button{
 display: inline-block;
-padding: var(--spacing-xs) var(--spacing-xl);
+padding: var(--spacing-xs) var(--spacing-xs);
 background-color: var(--primary-color);
 color: var(--background-light);
 text-decoration: none;
@@ -414,7 +414,7 @@ color: var(--background-dark);
 
 
 .etiqueta{
-background-color: color-mix(in oklch, var(--secondary-color) 33.3%, var(--background-light));
+background-color: color-mix(in oklch, var(--secondary-color) 33.3%, var(--primary-color));
 padding: calc(var(--spacing-xs) / 2 ) var(--spacing-xs);
 border-radius: var(--radius);
 font-size: var(--parrafo-sm);
