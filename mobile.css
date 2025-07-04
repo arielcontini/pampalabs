@@ -5,6 +5,8 @@
 
 :root{
     color-scheme: light dark;
+    --navbar-light: oklch(0.9461 0 0 / 77%);
+    --navbar-dark: oklch(0.0969 0 0 / 77%);
     --primary-color: oklch(0.6958 0.204259 43.491);
     --secondary-color: oklch(0.7294 0.1687 34.05);
     --tertiary-color: oklch(0.7294 0.1687 34.05); 
@@ -52,7 +54,6 @@ font-family: Arial, Helvetica, sans-serif;
 font-style: normal;
 line-height: 2.4rem;
 scroll-behavior: smooth;
-background-color: light-dark( var(--background-light) var(--background-dark));
 color: light-dark( var(--background-dark) var(--background-light));
 }
 
@@ -72,6 +73,7 @@ container-name: principal;
 width: 100%;
 height: auto;
 margin: 0 auto;
+background-color: light-dark(var(--background-light), var(--background-dark));
 }
 
 /* SECCION NAVEGACION */
@@ -85,7 +87,6 @@ width: 100%;
 height: auto;
 max-height: 320px;
 border-radius: var(--radius);
-    background-color:light-dark(var(--background-dark) var(--primary-color));
 }
 
 .nav--menu{
@@ -94,24 +95,22 @@ height: auto;
 margin: 0 auto;
 border-radius: var(--radius);
 z-index: 1000;
-    background-color:light-dark(var(--background-dark) var(--primary-color));
 }
 
 .menu{
     width: 100%;
-    height: 48px;
+    height: 32px;
     display: flex;
     flex-direction: grid;
     justify-content: center;
     align-items: center;
     position: fixed;
     padding: var(--spacing-xl);
-    margin: .8rem auto;
+    margin: .32rem auto;
     border-radius: 2.4rem;
     z-index: 1000;
-    backdrop-filter: blur(32px);
-    background-color: oklch(0.3092 0 0 / 66%);
-    mix-blend-mode: plus-lighter;
+    backdrop-filter: blur(24px);
+    background-color: light-dark(var(--navbar-light), var(--navbar-dark));
 }
 
 .logo{
@@ -125,19 +124,19 @@ z-index: 1000;
     height: auto;
     padding: var(--spacing-big) var(--spacing-xs);
     font-size: var(--subtitulo);
-    color: light-dark( var(--background-dark) var(--background-light));;
+    color: light-dark( var(--background-dark), var(--background-light));;
 }
 
 
 .menu-btn{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     width: 56px;
     height: 56px;
-    background: transparent;
-    color: light-dark( var(--background-dark) var(--background-light));
+    background-color: transparent;
+    color: light-dark( var(--background-dark), var(--background-light));
     border: none;
     cursor: pointer;
     font-size: var(--parrafo);
@@ -146,7 +145,7 @@ z-index: 1000;
 
 .menu-list{
     position:absolute;
-    top:72px;
+    top:66px;
     margin: var(--general-margin);
     width: 100%;
     height: auto;
@@ -160,17 +159,16 @@ z-index: 1000;
     transition: opacity .1s, transform 0.1s;
     font-weight: bold;
     z-index: 1000;
-        background-color: oklch(0.3092 0 0 / 24%);
 }
 
 a{
     text-decoration: none;
-    color: light-dark( var(--background-dark) var(--background-light));;
+    color: light-dark( var(--background-dark), var(--background-light));
     cursor: pointer;
 }
 
 a:hover{
-color: light-dark ( var(--background-light) var(--background-dark) );
+color: light-dark ( var(--background-light), var(--background-light));
 cursor: pointer;
 }
 
@@ -181,8 +179,8 @@ color: var(--primary-color);
 .menu:hover .menu-list, .menu:focus-within .menu-list{
 opacity:1;
 transform: scaleY(1);
-color: light-dark(var(--background-dark) var(--primary-color));
-background-color: oklch(0.3092 0 0 / 24%);
+color: light-dark(var(--primary-color), var(--background-light));
+background-color: light-dark(var(--navbar-light), var(--navbar-dark));
 }
 
 
@@ -198,13 +196,13 @@ background-color: oklch(0.3092 0 0 / 24%);
     color: var(--cuaternary-color);
     padding: var(--spacing-xs);
     border-radius: var(--radius);
-    transition: all 0.3s ease;
+    transition: all 0.88s ease-in;
 }
 
 :is(.nav--links a:hover, .nav--links a:focus){
  background-color: var(--tertiary-color); 
  color: var(--cuaternary-color);
- transition: all 0.66 ease;  
+ transition: all 0.88 ease-in;  
 
 }
 
@@ -217,9 +215,12 @@ text-align: center;
 overflow: hidden;
 margin: var(--spacing-big) auto;
 padding: var(--spacing-xxl) var(--spacing-xs);
- background-image: url(./hero-bg.webp);
+ background-image:  url(./hero.png);
  background-size:cover;
  width: 100%;
+ min-width: 1280px;
+ height: 100%;
+ min-height: 1080px;
 
  /* 
  background: linear-gradient(190deg,
@@ -255,7 +256,7 @@ oklch(0.6958 0.204259 43.491 / 90%) 100%,
     margin-bottom: var(--spacing-md);
     --color-destacado: var(var(--background-light));
     line-height: 3.2rem;
-    color: light-dark( var(--background-light) var(--background-dark));
+    color: light-dark( var(--background-light), var(--background-light));
 }
 
 .hero:has(.cta-button:hover) h1{
@@ -273,7 +274,7 @@ oklch(0.6958 0.204259 43.491 / 90%) 100%,
     max-width: 800px;
     margin: var(--general-margin) var(--spacing-xl); 
     line-height: 2.4rem;
-    color: light-dark( var(--background-dark) var(--background-light));
+    color: light-dark( var(--background-light), var(--background-light));
 }
 
 .cta-button{
@@ -710,8 +711,8 @@ font-size: var(--parrafo);
 
 .footer{
 padding: var(--spacing-xxl) 0 ;
-background-color: light-dark( var(--background-dark) var(--background-light));
-color: light-dark( var(--background-dark) var(--background-light));;
+background-color: light-dark( var(--background-light), var(--background-dark));
+color: light-dark( var(--background-dark), var(--background-light));;
 text-align: center;
 
 }
