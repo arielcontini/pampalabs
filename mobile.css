@@ -11,6 +11,12 @@
     --cuaternary-color: oklch(0.1338 0.0271 29.12); 
     --background-light: oklch(0.9461 0 0);  /* casi blanco */
     --background-dark: oklch(0.0969 0 0);  /* casi negro */
+    --gradient: linear-gradient(190deg,
+  oklch(0.0969 0 0 / 1%) 33%,
+oklch(0.6958 0.204259 43.491 / 90%) 100%,
+  oklch(0.0969 0 0 / 1%) 66%,
+  oklch(0.6958 0.204259 43.491 / 33%) 10%
+ );
 
 /* USAMOS CLAMP PARA TAMAÑOS DE FUENTES RESPONSIVOS QUE SE AJUSTAN AUTOMATICAMENTE BASADOS
 EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
@@ -451,7 +457,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,.05);
 content-visibility: auto;
 contain-intrinsic-size: 0 300px;
 transition: transform 0.5s ease;
-border: .001rem solid var(--background-dark); 
+border: .008rem solid var(--primary-color); 
 opacity: .9;
 transition: all .5s;
 width: 100%;
@@ -462,10 +468,17 @@ align-items: center;
 }
 
 .problem--card:hover{
-    color: var(--background-dark);
+    border: .16rem solid var(--primary-color); 
+    color: var(--primary-color);
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0,0,0,.1);
-    background-color: var(--primary-color);
+    background: var(--background-dark) ;
+    background: linear-gradient(180deg,
+  oklch(0.0969 0 0 / 1%) 33%,
+oklch(0.6958 0.204259 43.491 / 33%) 100%,
+  oklch(0.0969 0 0 / 1%) 66%,
+  oklch(0.6958 0.204259 43.491 / 66%) 10%
+ );
     opacity: 1;
     transition: all .5s;
 }
@@ -517,14 +530,14 @@ mix-blend-mode: multiply;
 }
 
 .solution--card{
-color: rgba(255, 102, 102, 0.111);
+color: var(--secondary-color);
 border-radius: var(--radius);
 overflow: hidden;
 box-shadow: 0 1px 2px rgba(0,0,0,.05);
 content-visibility: auto;
 contain-intrinsic-size: 0 300px;
 transition: all 0.5s ease;
-/* border: .001rem solid var(--background-dark); */
+border: .008rem solid var(--secondary-color);
 opacity: 1;
 width: 100%;
 min-height: 400px;
@@ -535,11 +548,18 @@ align-items: center;
 }
 
 .solution--card:hover , .problem--card:focus-within{
-    color: var(--background-dark);
+    border: .16rem solid var(--secondary-color); 
+    color: var(--secondary-color);
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0,0,0,.1);
-    background-color: var(--primary-color);
-    transition: all .5s;
+    background: var(--background-dark) ;
+    background: linear-gradient(180deg,
+  oklch(0.0969 0 0 / 1%) 33%,
+oklch(0.7294 0.1687 34.05 / 33%) 100%,
+  oklch(0.0969 0 0 / 1%) 66%,
+  oklch(0.7294 0.1687 34.05 / 66%) 10%
+ );
+    transition: all 1s;
 }
 
 
