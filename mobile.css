@@ -229,7 +229,7 @@ margin: var(--general-margin);
 padding: var(--spacing-xxl) var(--spacing-xs);
  width: 100%;
  height: 960px;  
-
+/* GRADIENT */
  background: linear-gradient(190deg,
   oklch(0.0969 0 0 / 1%) 33%,
 oklch(0.6958 0.204259 43.491 / 90%) 100%,
@@ -418,11 +418,13 @@ color: var(--background-dark);
 
 
 .etiqueta{
-background-color: color-mix(in oklch, var(--secondary-color) 11.3%, var(--primary-color));
+/* background-color: color-mix(in oklch, var(--secondary-color) 11.3%, var(--primary-color)); */
+background-color: light-dark( var(--background-light), var(--background-dark)  );
 padding: calc(var(--spacing-xs) / 2 ) var(--spacing-xs);
 border-radius: var(--radius);
 font-size: var(--parrafo-sm);
-color: light-dark(var(--background-light), var(--background-light));
+color: light-dark(var(--text-dark), var(--text-light));
+border: .08rem solid var(--primary-color);
 }
 
 
