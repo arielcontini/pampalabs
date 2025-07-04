@@ -139,19 +139,20 @@ z-index: 1000;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
     color: light-dark( var(--background-dark), var(--background-light));
     border: none;
     cursor: pointer;
     font-size: var(--parrafo);
     padding: var(--spacing-xs);
+    border: .016rem solid var(--border-light);
 }
 
 .menu-list{
     position:absolute;
-    top:67px;
+    top:66px;
     margin: var(--general-margin);
     width: 100%;
     height: auto;
@@ -165,6 +166,7 @@ z-index: 1000;
     font-weight: 600;
     z-index: 1000;
     backdrop-filter: blur(32px);
+    border: .016rem solid var(--border-light);
     border-radius: var(--radius);
 }
 
