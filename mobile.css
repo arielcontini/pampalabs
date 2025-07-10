@@ -5,23 +5,33 @@
 
 :root{
     color-scheme: light dark;
+
+    /* ORANGE VALUES */
+    --orange-50: oklch(0.9758 0.0151 61.35);
+    --orange-100: oklch(0.9446 0.0357 61.95);
+    --orange-200: oklch(0.8831 0.0749 58.08);
+    --orange-300: oklch(0.8095 0.1198 54.07);
+    --orange-400: oklch(0.7246 0.1722 45.37);
+    --orange-500: oklch(0.6725 0.2061 39.23); 
+    --orange-600: oklch(0.6194 0.2138 34.7);
+    --orange-700: oklch(0.5333 0.1895 33.03);
+    --orange-800: oklch(0.4532 0.156 31.9);
+    --orange-900: oklch(0.2562 0.0838 30.32);
+
     --navbar-light: oklch(0.9461 0 0 / 66%);
     --border-light: oklch(0.9461 0 0 / 11%);
     --navbar-dark: oklch(0.0969 0 0 / 66%);
+
     --text-light:  oklch(0.9461 0 0);
-    --text-dark: oklch(0.0969 0 0); ;
-    --primary-color: oklch(0.6958 0.204259 43.491);
+    --text-dark: oklch(0.0969 0 0);
+
+    --primary-color: oklch(0.6957 0.201 40.2);
     --secondary-color: oklch(0.7294 0.1687 34.05);
     --tertiary-color: oklch(0.7294 0.1687 34.05); 
     --cuaternary-color: oklch(0.1338 0.0271 29.12); 
     --background-light: oklch(0.9461 0 0);  /* casi blanco */
-    --background-dark: oklch(0.0969 0 0);  /* casi negro */
-    --gradient: linear-gradient(190deg,
-  oklch(0.0969 0 0 / 1%) 33%,
-oklch(0.6958 0.204259 43.491 / 90%) 100%,
-  oklch(0.0969 0 0 / 1%) 66%,
-  oklch(0.6958 0.204259 43.491 / 33%) 10%
- );
+    --background-dark: oklch(0.1108 0.0254 62.51);  /* casi negro */
+
 
 /* USAMOS CLAMP PARA TAMAÑOS DE FUENTES RESPONSIVOS QUE SE AJUSTAN AUTOMATICAMENTE BASADOS
 EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
@@ -40,9 +50,9 @@ EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
     --general-padding: 1.6rem;
     --general-margin: 0 auto;
     --titulo: clamp(2.4rem, 1.6rem + 0.56vw, 3.2rem);
-    --subtitulo: clamp(1.6rem, 1.4rem + 0.56vw, 2.4rem);
-    --parrafo: clamp(1.2rem, 0.8rem + 0.56vw, 1.25rem);
-    --parrafo-sm: clamp(.8rem, 0.7rem, + 0.56vw, 1rem);
+    --subtitulo: clamp(1.6rem, 1.44rem + 0.56vw, 2.4rem);
+    --parrafo: clamp(1.20rem, 0.8rem + 0.56vw, 1.20rem);
+    --parrafo-sm: clamp(.8rem, 0.72rem, + 0.56vw, 1.04rem);
 }
 
 
