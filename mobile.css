@@ -53,6 +53,7 @@ EN EL VIEWPORT SIN NECESIDAD DE USAR MEDIAQUERIES */
     --subtitulo: clamp(1.6rem, 1.44rem + 0.56vw, 2.4rem);
     --parrafo: clamp(1.20rem, 0.8rem + 0.56vw, 1.20rem);
     --parrafo-sm: clamp(.8rem, 0.72rem, + 0.56vw, 1.04rem);
+    --parrafo-xs: .64rem;
 }
 
 
@@ -433,7 +434,7 @@ color: var(--background-dark);
 background-color: light-dark( var(--background-light), var(--background-dark)  );
 padding: calc(var(--spacing-xs) / 2 ) var(--spacing-xs);
 border-radius: var(--radius);
-font-size: var(--parrafo-sm);
+font-size: var(--parrafo-xs);
 color: light-dark(var(--text-dark), var(--text-light));
 border: .08rem solid var(--primary-color);
 }
